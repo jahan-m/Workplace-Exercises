@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Exercises</title>
+    <link rel="icon" href="./data/icon_main.png">
+    <script src="./js/main.js"></script>
+</head>
+<style>
+    body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+        background-color: lightgray;
+    }
+    img {
+        width: auto;
+        height: 500px;
+        display: block;
+        margin: 20px auto;
+    }
+    button {
+        margin: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div>
+        <h2>Office Exercises</h2>
+        
+        <br>
+        <label for="exerciseSequenceSelect">Choose exercise sequences:</label>
+        <select id="exerciseSequenceSelect" onchange="handleExerciseSequenceSelectDropdownChange(this)">
+            <option value="--select--">--select--</option>
+            <option value="Warm Up">Warm Up</option>
+            <option value="Upper Body">Upper Body</option>
+            <option value="Lower Body">Lower Body</option>
+            <option value="Full Body">Full Body</option>
+            <option value="Cool Down">Cool Down</option>
+        </select>
+        
+        <br>
+        <br>
+        <br>
+        <h3 id="exerciseTitle"></h3>
+        <img id="exerciseGIF" src="./data/icon_gray.png" alt="GIF Image">
+        
+        <br>
+        <button id="prevExerciseGIFBtn" disabled="true" onclick="handlePrevExerciseGIF()">Previous</button>
+        <button id="nextExerciseGIFBtn" disabled="true" onclick="handleNextExerciseGIF()">Next</button>
+        
+        <!-- <br>
+        <p id="debugP"></p> -->
+        
+        
+    </div>
+</body>
+</html>
